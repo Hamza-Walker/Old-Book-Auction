@@ -19,6 +19,16 @@ public class Bidder {
         this.interested = interested;
     }
 
+    public boolean isInterested(Book book) {
+        Topic bookTopic = book.getTopic();
+        int bookPrice = book.getPrice();
+        Topic interest1 = this.interested[0];
+        Topic interest2 = this.interested[1];
+        boolean canAfford = this.capital > bookPrice;
+
+        return ((this.favourite == bookTopic || interest1 == bookTopic || interest2 == bookTopic) && canAfford);
+    }
+
     private static int getBidPrice(int currentPrice, int threshold) {
         return 0;
         //TODO

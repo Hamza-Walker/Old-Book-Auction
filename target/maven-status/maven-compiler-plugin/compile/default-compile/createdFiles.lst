@@ -1,4 +1,5 @@
 com/codecool/old_book_auction/model/Bidder.class
+com/codecool/old_book_auction/controller/Auction.class
 com/codecool/old_book_auction/model/Book.class
 com/codecool/old_book_auction/data/BidderGenerator.class
 com/codecool/old_book_auction/model/Bid.class
