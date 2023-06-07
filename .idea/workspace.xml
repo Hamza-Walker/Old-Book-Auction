@@ -5,19 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c251be7f-330b-4fa9-9163-7fbf76380b6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/old_book_auction/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/old_book_auction/model/Topic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/old-book-auction-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/old_book_auction/data/BookGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/old_book_auction/model/Bid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/old_book_auction/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codecool/old_book_auction/model/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/old_book_auction/model/Bid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/old_book_auction/model/Bidder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/old_book_auction/model/Book.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/codecool/old_book_auction/model/Transaction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Old-Book-Auction.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/old_book_auction/model/Bidder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/old_book_auction/model/Bidder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/codecool/old_book_auction/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/codecool/old_book_auction/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/old-book-auction-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/old-book-auction-1.0-SNAPSHOT.jar" afterDir="false" />
+    </list>
+    <list id="3b05df5d-ac7b-44ee-9482-40668ed9d48e" name="Changes by mehmet" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/old_book_auction/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/old_book_auction/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
