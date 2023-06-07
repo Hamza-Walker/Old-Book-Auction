@@ -1,6 +1,8 @@
 package com.codecool.old_book_auction;
 
+import com.codecool.old_book_auction.data.BidderGenerator;
 import com.codecool.old_book_auction.data.BookGenerator;
+import com.codecool.old_book_auction.model.Bidder;
 import com.codecool.old_book_auction.model.Book;
 import com.codecool.old_book_auction.model.Topic;
 
@@ -16,8 +18,10 @@ public class App {
 
         BookGenerator newBook = new BookGenerator();
 
-        printMessage(newBook.genarateBook(minPrice, maxPrice));
-        printMessage(newBook.genarateBook(minPrice, maxPrice));
+        BidderGenerator bidders =  new BidderGenerator(bidderCount,minimumCapital,maximumCapital);
+        bidders.getBidders().forEach(System.out::println);
+        //printMessage(bidders);
+
 
 
     }
