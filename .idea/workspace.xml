@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c251be7f-330b-4fa9-9163-7fbf76380b6a" name="Changes" comment="carefull theses an infitie loop">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codecool/old_book_auction/controller/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codecool/old_book_auction/controller/Auction.java" afterDir="false" />
-    </list>
+    <list default="true" id="c251be7f-330b-4fa9-9163-7fbf76380b6a" name="Changes" comment="carefull theses an infitie loop" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

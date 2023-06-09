@@ -4,15 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bidder {
-    private int id;
-    private String name;
+    private final String name;
     private double capital;
-    private Topic favourite;
-    private Topic[] interested;
-    private List<Book> books;
+    private final Topic favourite;
+    private final Topic[] interested;
+    private final List<Book> books;
 
     public Bidder(int id, double capital, Topic favourite, Topic[] interested) {
-        this.id = id;
         this.name = "Bidder #" + id;
         this.capital = capital;
         this.favourite = favourite;
@@ -45,52 +43,8 @@ public class Bidder {
         }
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getCapital() {
-        return capital;
-    }
-
-    public void setCapital(double capital) {
-        this.capital = capital;
-    }
-
-    public Topic getFavourite() {
-        return favourite;
-    }
-
-    public void setFavourite(Topic favourite) {
-        this.favourite = favourite;
-    }
-
-    public Topic[] getInterested() {
-        return interested;
-    }
-
-    public void setInterested(Topic[] interested) {
-        this.interested = interested;
-    }
-
-    public List<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(List<Book> books) {
-        this.books = books;
     }
 
     // Getters and setters

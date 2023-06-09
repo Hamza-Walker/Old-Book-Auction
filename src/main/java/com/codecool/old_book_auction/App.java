@@ -3,9 +3,7 @@ package com.codecool.old_book_auction;
 import com.codecool.old_book_auction.data.BidderGenerator;
 import com.codecool.old_book_auction.controller.Auction;
 import com.codecool.old_book_auction.data.BookGenerator;
-import com.codecool.old_book_auction.model.Bidder;
 import com.codecool.old_book_auction.model.Book;
-import com.codecool.old_book_auction.model.Topic;
 
 
 public class App {
