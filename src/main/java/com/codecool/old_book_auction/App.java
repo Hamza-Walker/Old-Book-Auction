@@ -1,7 +1,8 @@
 package com.codecool.old_book_auction;
 
-
+import com.codecool.old_book_auction.data.BidderGenerator;
 import com.codecool.old_book_auction.controller.Auction;
+import com.codecool.old_book_auction.data.BookGenerator;
 import com.codecool.old_book_auction.model.Bidder;
 import com.codecool.old_book_auction.model.Book;
 import com.codecool.old_book_auction.model.Topic;
@@ -9,23 +10,16 @@ import com.codecool.old_book_auction.model.Topic;
 
 public class App {
     public static void main(String[] args) {
+        BidderGenerator bidderGenerator = new BidderGenerator(5, 500, 1500);
         Auction auction = new Auction();
 
-        Bidder bidder1 = new Bidder(1, 1000, Topic.ARCHEOLOGY, new Topic[]{Topic.ASTRONOMY, Topic.HISTORY});
-        Bidder bidder2 = new Bidder(2, 800, Topic.ASTRONOMY, new Topic[]{Topic.ARCHEOLOGY, Topic.MEDICINE});
-        Bidder bidder3 = new Bidder(3, 1500, Topic.MEDICINE, new Topic[]{Topic.CHEMISTRY, Topic.PHYSICS});
+        bidderGenerator.getBidders().forEach(auction::addBidder);
 
-        auction.addBidder(bidder1);
-        auction.addBidder(bidder2);
-        auction.addBidder(bidder3);
-
-        Book book1 = new Book(1, "Book 1", Topic.ARCHEOLOGY, 300);
-        Book book2 = new Book(2, "Book 2", Topic.ASTRONOMY, 400);
-        Book book3 = new Book(3, "Book 3", Topic.CHEMISTRY, 500);
-
-        auction.addBook(book1);
-        auction.addBook(book2);
-        auction.addBook(book3);
+        BookGenerator bookGenerator = new BookGenerator();
+        for (int i = 0; i < 10; i++) {
+            Book book = bookGenerator.generateBook(100, 500);
+            auction.addBook(book);
+        }
 
         auction.startAuction();
     }

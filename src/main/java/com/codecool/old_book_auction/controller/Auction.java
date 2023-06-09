@@ -48,9 +48,8 @@ public class Auction {
                     currentPrice = newBid.getBidPrice();
                 } else {
                     System.out.println(newBid.getBidder().getName() + " cannot place a bid higher than the current price.");
+                    interestedBidders.remove(bidder); // Remove the bidder who cannot place a higher bid
                 }
-
-                interestedBidders = getInterestedBidders(book);
             }
 
             winner = interestedBidders.get(0);
@@ -58,6 +57,7 @@ public class Auction {
             winner.purchaseBook(book);
         }
     }
+
 
     private List<Bidder> getInterestedBidders(Book book) {
         return bidders.stream()

@@ -12,7 +12,7 @@ public class BookGenerator {
     private static final Random RANDOM = new Random();
     public final String[] bookNames = getNames();
     private int currentId = 0;
-    public Book genarateBook ( int min, int max) {
+    public Book generateBook ( int min, int max) {
         int id = currentId++;
 
         Topic randomTopic = Topic.values()[RANDOM.nextInt(Topic.values().length)];
