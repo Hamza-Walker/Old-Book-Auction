@@ -1,9 +1,16 @@
 package com.codecool.old_book_auction.model;
 
 public class Bid {
-    private final int id;
-    private final Bidder bidder;
-    private final int bidPrice;
+    private static int nextId = 1;
+    private int id;
+    private Bidder bidder;
+    private int bidPrice;
+
+    public Bid(Bidder bidder, int bidPrice) {
+        this.id = nextId++;
+        this.bidder = bidder;
+        this.bidPrice = bidPrice;
+    }
 
     public int getId() {
         return id;
@@ -15,11 +22,5 @@ public class Bid {
 
     public int getBidPrice() {
         return bidPrice;
-    }
-
-    public Bid(int id, Bidder bidder, int bidPrice) {
-        this.id = id;
-        this.bidder = bidder;
-        this.bidPrice = bidPrice;
     }
 }

@@ -1,15 +1,15 @@
 package com.codecool.old_book_auction.model;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Bidder {
-    private final ArrayList<Book> books = new ArrayList<Book>();
-    private final Topic favourite;
-    private final Topic[] interested;
     private int id;
     private String name;
     private double capital;
+    private Topic favourite;
+    private Topic[] interested;
+    private List<Book> books;
 
     public Bidder(int id, double capital, Topic favourite, Topic[] interested) {
         this.id = id;
@@ -17,6 +17,7 @@ public class Bidder {
         this.capital = capital;
         this.favourite = favourite;
         this.interested = interested;
+        this.books = new ArrayList<>();
     }
 
     public boolean isInterested(Book book) {
@@ -29,59 +30,68 @@ public class Bidder {
         return ((this.favourite == bookTopic || interest1 == bookTopic || interest2 == bookTopic) && canAfford);
     }
 
-    private static int getBidPrice(int currentPrice, int threshold) {
-        return 0;
-        //TODO
+    public void purchaseBook(Book book) {
+        books.add(book);
+        capital -= book.getPrice();
     }
 
-    public boolean interested(Book book) {
-        return false;
-        //TODO
+    public double getThreshold() {
+        if (favourite == null) {
+            return capital;
+        } else if (favourite.equals(interested[0])) {
+            return capital * 0.25;
+        } else {
+            return capital * 0.5;
+        }
     }
 
-    public boolean canBid(Book book, int currentPrice) {
-        return false;
-        //TODO
+    public int getId() {
+        return id;
     }
 
-    public Bid getBid(Book book, Bid currentBid) {
-        return null;
-        //TODO
+    public void setId(int id) {
+        this.id = id;
     }
 
-    private int getThresholdPrice(Topic topic) {
-        return 0;
-        //TODO
+    public String getName() {
+        return name;
     }
 
-    public void buyBook(Book book) {
-        //TODO
+    public void setName(String name) {
+        this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Bidder{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", books=" + books +
-                ", favourite=" + favourite +
-                ", interested=" + Arrays.toString(interested) +
-                ", capital=" + capital +
-                '}';
+    public double getCapital() {
+        return capital;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Bidder bidder = (Bidder) o;
-        return Double.compare(bidder.capital, capital) == 0 && id == bidder.id && Objects.equals(books, bidder.books) && favourite == bidder.favourite && Arrays.equals(interested, bidder.interested) && Objects.equals(name, bidder.name);
+    public void setCapital(double capital) {
+        this.capital = capital;
     }
 
-    @Override
-    public int hashCode() {
-        int result = Objects.hash(books, favourite, capital, id, name);
-        result = 31 * result + Arrays.hashCode(interested);
-        return result;
+    public Topic getFavourite() {
+        return favourite;
     }
+
+    public void setFavourite(Topic favourite) {
+        this.favourite = favourite;
+    }
+
+    public Topic[] getInterested() {
+        return interested;
+    }
+
+    public void setInterested(Topic[] interested) {
+        this.interested = interested;
+    }
+
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
+
+    // Getters and setters
 }

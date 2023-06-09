@@ -1,37 +1,32 @@
 package com.codecool.old_book_auction;
 
+
 import com.codecool.old_book_auction.controller.Auction;
-import com.codecool.old_book_auction.data.BidderGenerator;
-import com.codecool.old_book_auction.data.BookGenerator;
 import com.codecool.old_book_auction.model.Bidder;
 import com.codecool.old_book_auction.model.Book;
 import com.codecool.old_book_auction.model.Topic;
 
+
 public class App {
     public static void main(String[] args) {
-        final int bookCount = 20;
-        final int minPrice = 100;
-        final int maxPrice = 300;
+        Auction auction = new Auction();
 
+        Bidder bidder1 = new Bidder(1, 1000, Topic.ARCHEOLOGY, new Topic[]{Topic.ASTRONOMY, Topic.HISTORY});
+        Bidder bidder2 = new Bidder(2, 800, Topic.ASTRONOMY, new Topic[]{Topic.ARCHEOLOGY, Topic.MEDICINE});
+        Bidder bidder3 = new Bidder(3, 1500, Topic.MEDICINE, new Topic[]{Topic.CHEMISTRY, Topic.PHYSICS});
 
-        final int bidderCount = 10;
-        final int minimumCapital = 100;
-        final int maximumCapital = 1000;
+        auction.addBidder(bidder1);
+        auction.addBidder(bidder2);
+        auction.addBidder(bidder3);
 
-        BookGenerator bookGenerator = new BookGenerator();
-        Book oneBook = bookGenerator.genarateBook(minPrice,maxPrice);
-        BidderGenerator bidders =  new BidderGenerator(bidderCount,minimumCapital,maximumCapital);
+        Book book1 = new Book(1, "Book 1", Topic.ARCHEOLOGY, 300);
+        Book book2 = new Book(2, "Book 2", Topic.ASTRONOMY, 400);
+        Book book3 = new Book(3, "Book 3", Topic.CHEMISTRY, 500);
 
-        printMessage(oneBook);
+        auction.addBook(book1);
+        auction.addBook(book2);
+        auction.addBook(book3);
 
-        for (int i = 0; i < bidders.getBidders().size(); i++) {
-            Bidder currentBidder = bidders.getBidders().get(i);
-            printMessage(currentBidder);
-            printMessage(currentBidder.isInterested(oneBook));
-        }
-    }
-
-    public static <T> void printMessage (T message) {
-        System.out.println(message);
+        auction.startAuction();
     }
 }
