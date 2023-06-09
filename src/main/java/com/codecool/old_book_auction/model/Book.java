@@ -1,7 +1,5 @@
 package com.codecool.old_book_auction.model;
 
-import java.util.ArrayList;
-
 public class Book {
     private final int id;
     private final Topic topic;
@@ -23,10 +21,6 @@ public class Book {
                 ", title='" + title + '\'' +
                 ", price=" + price +
                 '}';
-    }
-
-    public int getId() {
-        return id;
     }
 
     public Topic getTopic() {
