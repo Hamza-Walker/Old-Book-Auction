@@ -4,6 +4,5 @@ com/codecool/old_book_auction/model/Book.class
 com/codecool/old_book_auction/data/BidderGenerator.class
 com/codecool/old_book_auction/model/Bid.class
 com/codecool/old_book_auction/model/Topic.class
-com/codecool/old_book_auction/model/Transaction.class
 com/codecool/old_book_auction/data/BookGenerator.class
 com/codecool/old_book_auction/App.class

@@ -9,19 +9,8 @@ import java.util.Random;
 
 public class BidderGenerator {
     private static final Random RANDOM = new Random();
-
-    public List<Bidder> getBidders() {
-        return bidders;
-    }
-
-    @Override
-    public String toString() {
-        return "BidderGenerator{" +
-                "bidders=" + bidders +
-                '}';
-    }
-
     private final List<Bidder> bidders = new ArrayList<>();
+
 
     public BidderGenerator (int amount, int minCapital, int maxCapital){
 
@@ -52,5 +41,14 @@ public class BidderGenerator {
 
         return shuffledTopics;
     }
+    public List<Bidder> getBidders() {
+        return bidders;
+    }
 
+    @Override
+    public String toString() {
+        return "BidderGenerator{" +
+                "bidders=" + bidders +
+                '}';
+    }
 }
