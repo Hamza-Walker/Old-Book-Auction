@@ -1,5 +1,6 @@
 package com.codecool.old_book_auction.data;
 
+import com.codecool.old_book_auction.controller.Auction;
 import com.codecool.old_book_auction.model.Book;
 import com.codecool.old_book_auction.model.Topic;
 
@@ -8,15 +9,34 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class BookGenerator {
-
-    private static final Random RANDOM = new Random();
-    public final String[] bookNames = getNames();
+    private final String[] bookNames;
     private int currentId = 0;
+
+    private Auction auction;
+    private Random random;
+
+    public BookGenerator(Auction auction, Random random) {
+        this.auction = auction;
+        this.random = random;
+    }
+
+    public void initBookNames() {
+        bookNames.getNames();
+    }
+
+    public void generateRandomBooks() {
+        //TODO: magic numbers
+        for (int i = 0; i < 10; i++) {
+            Book book = generateBook(100, 500);
+            auction.addBook(book);
+        }
+    }
+
     public Book generateBook ( int min, int max) {
         int id = currentId++;
-
-        Topic randomTopic = Topic.values()[RANDOM.nextInt(Topic.values().length)];
-        int price = RANDOM.nextInt(min, max);
+        Topic randomTopic =
+                Topic.values()[random.nextInt(Topic.values().length)];
+        int price = random.nextInt(min, max);
         return new Book(id, bookNames[id], randomTopic, price);
     }
     private String[] getNames() {

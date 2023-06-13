@@ -14,14 +14,21 @@ public class Auction {
     private List<Book> books;
     private Random random;
 
-    public Auction() {
-        this.bidders = new ArrayList<>();
-        this.books = new ArrayList<>();
-        this.random = new Random();
+    public Auction(Random random, List<Book> books, List<Bidder> bidders) {
+        this.bidders = bidders;
+        this.books = books;
+        this.random = random;
     }
 
-    public void addBidder(Bidder bidder) {
+    /*public void addBidder(Bidder bidder) {
         bidders.add(bidder);
+    }*/
+
+    public void addBidder(Bidder... bidder) {
+        bidders.addAll(List.of(bidder));
+    }
+    public void addBidder(List<Bidder> bidders) {
+        bidders.addAll(bidders);
     }
 
     public void addBook(Book book) {

@@ -8,17 +8,18 @@ import com.codecool.old_book_auction.model.Book;
 
 public class App {
     public static void main(String[] args) {
-        BidderGenerator bidderGenerator = new BidderGenerator(5, 500, 1500);
-        Auction auction = new Auction();
+        Random random = new Random();
+        List<Book> books = new ArrayList<>();
+        List<Book> bidders = new ArrayList<>();
 
-        bidderGenerator.getBidders().forEach(auction::addBidder);
-
-        BookGenerator bookGenerator = new BookGenerator();
-        for (int i = 0; i < 10; i++) {
-            Book book = bookGenerator.generateBook(100, 500);
-            auction.addBook(book);
-        }
-
+        Auction auction = new Auction(random, books, bidders);
+        BidderGenerator bidderGenerator = new BidderGenerator(random, bidders, 5, 500, 1500);
+        bidderGenerator.generateBidders();
+        //bidderGenerator.getBidders().forEach(auction::addBidder);
+        auction.addBidder(bidderGenerator.getBidders());
+        BookGenerator bookGenerator = new BookGenerator(auction, random);
+        bookGenerator.initBookNames();
+        bookGenerator.generateRandomBooks();
         auction.startAuction();
     }
 }
